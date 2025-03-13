@@ -6,6 +6,7 @@ $(document).ready(function() {
     $('#button-learned').click(function() { generateCards($(this).attr('id')); });
     $('#button-learning').click(function() { generateCards($(this).attr('id')); });
     $('#button-all').click(function() { generateCards($(this).attr('id')); });
+    $('#button-english').click(function() { generateCards($(this).attr('id')); });
 
     generateCards('button-learning');
 });
@@ -21,24 +22,39 @@ function generateCards(buttonId){
 
     let container = $('#cards-container');
     container.html('');
-    shuffle(chars);
     let count = 0, finishedCount = 0;
-    for (let i = 0; i < chars.length; i++){
-        let charInfo = chars[i].split('@');
-        if (inputChars.length == 0 || inputChars.includes(charInfo[0])){
-            container.append(`
-                <div class="card">
-                    <div class="char">${charInfo[0]}</div>
-                    <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./assets/${Math.floor(Math.random()*8)+1}.jpg'); background-position-y: ${Math.floor(Math.random()*101)}%;">
-                      <p>
-                        <span class="original-char"><b>${charInfo[0]}</b> </span>
-                        <span class="spelling">${charInfo[1]}</span><br>
-                        <span class="meaning">${charInfo[2]}</span>
-                      </p>
+
+    if (buttonId != 'button-english'){
+        shuffle(chars);
+        for (let i = 0; i < chars.length; i++){
+            let charInfo = chars[i].split('@');
+            if (inputChars.length == 0 || inputChars.includes(charInfo[0])){
+                container.append(`
+                    <div class="card">
+                        <div class="char">${charInfo[0]}</div>
+                        <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./assets/${Math.floor(Math.random()*8)+1}.jpg'); background-position-y: ${Math.floor(Math.random()*101)}%;">
+                          <p><b>${charInfo[0]}</b> ${charInfo[1]}<br>${charInfo[2]}</p>
+                        </div>
                     </div>
-                </div>
-            `);
-            count++;
+                `);
+                count++;
+            }
+        }
+    } else{
+        shuffle(englishWords);
+        for (let i = 0; i < 100; i++){
+            let charInfo = englishWords[i].split('@');
+            if (inputChars.length == 0 || inputChars.includes(charInfo[0])){
+                container.append(`
+                    <div class="card">
+                        <div class="char" style="font-size: 22px">${charInfo[0]}</div>
+                        <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./assets/${Math.floor(Math.random()*8)+1}.jpg'); background-position-y: ${Math.floor(Math.random()*101)}%;">
+                          <p style="font-size: 16px"><b>${charInfo[0]}</b> (${charInfo[1]})<br>${charInfo[2]}</p>
+                        </div>
+                    </div>
+                `);
+                count++;
+            }
         }
     }
 

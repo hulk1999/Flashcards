@@ -1,5 +1,5 @@
-const learned = "口人一二山三心十";
-const learning = "零四五六七八九百日月天大太金木水火土士子父母卒牛馬马象川林森竹雨夕門门刀舟車车炮名入伙仕中上下前後左右西東东南北古今令之止存亡無无有友";
+const learned = "口人一二山三心十零四五六七八九日月大太木水火土士子父牛馬马川林森竹雨夕門门刀舟車车炮入中上下前西北古令之";
+const learning = "百天金母卒象名伙仕後左右東东南今止存亡無无有友家男女分年豕力安平豬猪萬万千肉円因見见儿兒丁字小国國不乙全玉目毛午白犬猫貓";
 const chars = [
 "制@chế@chế ngự, thể chế, chế độ",
 "製@chế@chế tạo",
@@ -224,7 +224,7 @@ const chars = [
 "条@điều@điều khoản, điều kiện",
 "鳥@điểu@chim chóc",
 "調@điều, điệu@điều tra, điều hòa; thanh điệu, giai điệu",
-"丁@đinh@",
+"丁@đinh@can thứ 4 trong 天干, trai tráng",
 "町@đinh@khu phố",
 "停@đình@đình chỉ",
 "庭@đình@triều đình, gia đình",
@@ -422,7 +422,7 @@ const chars = [
 "劇@kịch@kịch bản, vở kịch, kịch tính",
 "検@kiểm@kiểm tra",
 "建@kiến@kiến thiết, kiến tạo",
-"見@kiến@ý kiến",
+"見@hiện, kiến@(见) hiện ra, chứng kiến, ý kiến, thấy",
 "件@kiện@điều kiện, sự kiện, bưu kiện",
 "健@kiện@khỏe mạnh, kiện khang, tráng kiện",
 "橋@kiều@cây cầu",
@@ -631,7 +631,7 @@ const chars = [
 "管@quản@ống, mao quản, quản lí",
 "光@quang@ánh sáng, nhật quang, quang minh",
 "広@quảng@quảng trường, quảng đại",
-"国@quốc@nước, quốc gia, quốc ca",
+"国@quốc@(國) nước, quốc gia, quốc ca",
 "帰@quy@hồi quy",
 "規@quy@quy tắc, quy luật",
 "季@quý@mùa",
@@ -648,7 +648,6 @@ const chars = [
 "産@sản@sản xuất, sinh sản, cộng sản",
 "創@sáng@sáng tạo",
 "庁@sảnh@đại sảnh",
-"繰@sào@",
 "渋@sáp@chát",
 "察@sát@quan sát, giám sát, cảnh sát",
 "殺@sát@sát hại, sát nhân",
@@ -1008,5 +1007,17 @@ const chars = [
 "马@mã@ngựa",
 "车@xa@xe cộ, xa lộ",
 "伙@hỏa, lõa@đồng hỏa: đồng bạn, đồng lõa",
-"炮@pháo@pháo, mìn"
-];
+"炮@pháo@pháo, mìn",
+"豕@thỉ@con heo, ít dùng hơn trư 豬",
+"豬@trư@(豬) con heo, thông dụng hơn thỉ 豕",
+"猪@trư@(豬) con heo, thông dụng hơn thỉ 豕",
+"萬@vạn@(万) mười ngàn, 10000",
+"见@hiện, kiến@(見) hiện ra, chứng kiến, ý kiến, thấy",
+"儿@nhi, nhân@(兒) trẻ con, nhi đồng, 儿 là nhân đi, 人 là nhân nằm",
+"兒@nhi@(儿) trẻ con, nhi đồng, 儿 là nhân đi, 人 là nhân nằm",
+"國@quốc@(国) quốc gia",
+"乙@ất@can thứ 2 trong 天干, ruột",
+"毛@mao, mô@lông vũ",
+"犬@khuyển@chó",
+"猫@miêu@(貓) mèo",
+"貓@miêu@(猫) mèo"];
