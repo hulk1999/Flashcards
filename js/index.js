@@ -49,7 +49,7 @@ function generateCards(buttonId){
                 <div class="card">
                     <div class="char" style="font-size: 36px">${charInfo[i%3]}</div>
                     <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./assets/${Math.floor(Math.random()*8)+1}.jpg'); background-position-y: ${Math.floor(Math.random()*101)}%;">
-                      <p style="font-size: 32px">${charInfo[0]} ${charInfo[1]} ${charInfo[2]}</p>
+                      <p style="font-size: 36px">${charInfo[0]}<br><b>${charInfo[1]} ${charInfo[2]}</b></p>
                     </div>
                 </div>
             `);
