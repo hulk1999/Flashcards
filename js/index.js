@@ -7,6 +7,7 @@ $(document).ready(function() {
     $('#button-learning').click(function() { generateCards($(this).attr('id')); });
     $('#button-all').click(function() { generateCards($(this).attr('id')); });
     $('#button-english').click(function() { generateCards($(this).attr('id')); });
+    $('#button-japanese').click(function() { generateCards($(this).attr('id')); });
 
     generateCards('button-learning');
 });
@@ -24,7 +25,38 @@ function generateCards(buttonId){
     container.html('');
     let count = 0, finishedCount = 0;
 
-    if (buttonId != 'button-english'){
+    if (buttonId == 'button-english'){
+        shuffle(englishWords);
+        for (let i = 0; i < 100; i++){
+            let charInfo = englishWords[i].split('@');
+            container.append(`
+                <div class="card">
+                    <div class="char" style="font-size: 22px">${charInfo[0]}</div>
+                    <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./assets/${Math.floor(Math.random()*8)+1}.jpg'); background-position-y: ${Math.floor(Math.random()*101)}%;">
+                      <p style="font-size: 16px"><b>${charInfo[0]}</b> (${charInfo[1]})<br>${charInfo[2]}</p>
+                    </div>
+                </div>
+            `);
+            count++;
+        }
+    }
+    else if (buttonId == 'button-japanese'){
+        shuffle(japaneseWords);
+        let n = japaneseWords.length;
+        for (let i = 0; i < n*3; i++){
+            let charInfo = japaneseWords[i%n].split('@');
+            container.append(`
+                <div class="card">
+                    <div class="char" style="font-size: 36px">${charInfo[i%3]}</div>
+                    <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./assets/${Math.floor(Math.random()*8)+1}.jpg'); background-position-y: ${Math.floor(Math.random()*101)}%;">
+                      <p style="font-size: 32px">${charInfo[0]} ${charInfo[1]} ${charInfo[2]}</p>
+                    </div>
+                </div>
+            `);
+            count++;
+        }
+    }
+    else{  // chinese
         shuffle(chars);
         for (let i = 0; i < chars.length; i++){
             let charInfo = chars[i].split('@');
@@ -40,23 +72,8 @@ function generateCards(buttonId){
                 count++;
             }
         }
-    } else{
-        shuffle(englishWords);
-        for (let i = 0; i < 100; i++){
-            let charInfo = englishWords[i].split('@');
-            if (inputChars.length == 0 || inputChars.includes(charInfo[0])){
-                container.append(`
-                    <div class="card">
-                        <div class="char" style="font-size: 22px">${charInfo[0]}</div>
-                        <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./assets/${Math.floor(Math.random()*8)+1}.jpg'); background-position-y: ${Math.floor(Math.random()*101)}%;">
-                          <p style="font-size: 16px"><b>${charInfo[0]}</b> (${charInfo[1]})<br>${charInfo[2]}</p>
-                        </div>
-                    </div>
-                `);
-                count++;
-            }
-        }
     }
+
 
     $('.card').click(function() {
         if ($(this).find('.char').length){

@@ -1,5 +1,5 @@
-const learned = "口人一二山三心十零四五六七八九日月大太木水火土士子父牛馬马川林森竹雨夕門门刀舟車车炮入中上下前西北古令之";
-const learning = "百天金母卒象名伙仕後左右東东南今止存亡無无有友家男女分年豕力安平豬猪萬万千肉円因見见儿兒丁字小国國不乙全玉目毛午白犬猫貓";
+const learned = "口人一二山三心十零四五六七八九日月大太木水火土士子父牛馬马川林森竹雨夕門门刀舟車车炮入中上下前西北古令之百天金母卒象名伙仕後東东南今止亡家男女分年豕力安豬猪肉円儿兒丁小国國不乙玉目毛犬猫貓";
+const learning = "左右存無无有友平萬万千因見见字全午白個固足个箇來来先光行出去往了彳亍主坐帝內外工君苦失兄姉妹飲魚弟漢品";
 const chars = [
 "制@chế@chế ngự, thể chế, chế độ",
 "製@chế@chế tạo",
@@ -160,7 +160,6 @@ const chars = [
 "倍@bội@bội thu, bội số",
 "郵@bưu@bưu điện",
 "歌@ca@ca dao, ca khúc",
-"個@cá@cá nhân, cá thể",
 "各@các@các, mỗi",
 "閣@các@nội các",
 "格@cách@tư cách, cách thức, sở hữu cách",
@@ -407,7 +406,7 @@ const chars = [
 "空@không@không khí, hư không, hàng không",
 "控@khống@khống chế",
 "区@khu@khu vực, địa khu",
-"去@khứ@quá khứ, trừ khử",
+"去@khứ@đi, quá khứ, trừ khử; khứ niên: năm ngoái; đối với lai 來",
 "曲@khúc@ca khúc",
 "拡@khuếch@khuếch đại",
 "恐@khủng@khủng bố, khủng hoảng",
@@ -1020,4 +1019,22 @@ const chars = [
 "毛@mao, mô@lông vũ",
 "犬@khuyển@chó",
 "猫@miêu@(貓) mèo",
-"貓@miêu@(猫) mèo"];
+"貓@miêu@(猫) mèo",
+"个@cá@(箇, 個) cá biệt, cá thể",
+"箇@cá@(个, 個) cá biệt, cá thể",
+"來@lai@đến, đến nay, về sau; lai niên: năm sau; đối với khứ 去, vãng 往",
+"個@cá@(个, 箇 ) cá biệt, cá thể",
+"往@vãng@đi, đã qua; vãng lai 往來: đi lại",
+"彳@xích@bước chân trái, bước ngắn, bộ xích",
+"亍@xúc@bước chân phải, ngừng bước",
+"坐@tọa@ngồi, đi xe, buộc tội",
+"帝@đế@vua, thượng đế",
+"內@nội, nạp@bên trong, thu vào, giao nộp",
+"兄@huynh@anh trai",
+"姉@tỉ@chị gái",
+"妹@muội@em gái",
+"飲@ẩm@uống, đồ uống",
+"魚@ngư@cá",
+"弟@đệ@em trai",
+"漢@hán@chữ hán, người Trung Quốc"
+];
